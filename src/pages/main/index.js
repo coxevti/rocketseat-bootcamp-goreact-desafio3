@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
-import 'react-toastify/dist/ReactToastify.css';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
