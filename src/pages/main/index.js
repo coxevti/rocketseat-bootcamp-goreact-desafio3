@@ -4,9 +4,6 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import 'react-toastify/dist/ReactToastify.css';
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'mapbox-gl/dist/mapbox-gl.css';
-
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Creators as DeveloperActions } from '../../store/ducks/developer';
