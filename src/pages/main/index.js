@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
-import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -46,14 +45,6 @@ class Main extends Component {
     showModalDeveloper({ latitude, longitude });
   };
 
-  notifyErro = msg => toast.error(msg, {
-    position: toast.POSITION.TOP_CENTER,
-  });
-
-  notifySuccess = msg => toast.success(msg, {
-    position: toast.POSITION.TOP_CENTER,
-  });
-
   render() {
     const { viewport: vPort } = this.state;
     const { developers } = this.props;
@@ -84,8 +75,6 @@ class Main extends Component {
             </Marker>
           ))}
         </ReactMapGL>
-        {!!developers.error && this.notifyErro(developers.error)}
-        {!!developers.msg && this.notifySuccess(developers.msg)}
 
         {developers.modalDeveloper && <Modal />}
       </Fragment>
